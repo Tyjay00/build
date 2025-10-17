@@ -15,6 +15,14 @@ export default defineConfig(({ mode }) => {
         outDir: 'dist',
         assetsDir: 'assets',
         emptyOutDir: true,
+        rollupOptions: {
+          output: {
+            manualChunks: undefined,
+          },
+        },
+      },
+      esbuild: {
+        target: 'es2015'
       },
       define: {
         'process.env.API_KEY': JSON.stringify(env.GEMINI_API_KEY),
