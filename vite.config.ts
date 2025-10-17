@@ -24,6 +24,8 @@ export default defineConfig(({ mode }) => {
             assetFileNames: 'assets/[name].[ext]'
           },
         },
+        target: 'es2015',
+        minify: 'esbuild',
       },
       esbuild: {
         target: 'es2015'
